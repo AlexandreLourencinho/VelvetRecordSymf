@@ -1,0 +1,13 @@
+img{
+    width: 50%!important;
+}
+
+body{
+    background-image: url("../image/fond.jpg")!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+}
+
+nav.navbar-dark{
+    background-color: rgba(0,0,0,0.6) !important;
+}
