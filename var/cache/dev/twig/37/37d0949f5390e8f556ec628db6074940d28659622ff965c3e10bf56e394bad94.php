@@ -65,7 +65,7 @@ class __TwigTemplate_88ba4dc945e2dd4f8097bdf7c55289afbd3d99fd4c1676f0a2c5037049b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Disc";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 3, $this->source); })()), "discTitle", [], "any", false, false, false, 3), "html", null, true);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,76 +85,87 @@ class __TwigTemplate_88ba4dc945e2dd4f8097bdf7c55289afbd3d99fd4c1676f0a2c5037049b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Disc</h1>
-
-    <table class=\"table\">
-        <tbody>
-            <tr>
-                <th>DiscId</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 12, $this->source); })()), "discId", [], "any", false, false, false, 12), "html", null, true);
+        echo "    <u><b><h1 class=\"text-light text-center\">Détails de ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 6, $this->source); })()), "discTitle", [], "any", false, false, false, 6), "html", null, true);
+        echo "</h1></b></u>
+    <div class=\"row justify-content-center\">
+        <div class=\"col-auto\">
+            <div class=\"table-responsive col-10\">
+                <table class=\"table table-hover table-bordered table-striped col-9\">
+                    <tbody>
+                    <tr>
+                        <th class=\"text-\">Titre</th>
+                        <td>";
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 14, $this->source); })()), "discTitle", [], "any", false, false, false, 14), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscTitle</th>
-                <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 16, $this->source); })()), "discTitle", [], "any", false, false, false, 16), "html", null, true);
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Année</th>
+                        <td>";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 18, $this->source); })()), "discYear", [], "any", false, false, false, 18), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscYear</th>
-                <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 20, $this->source); })()), "discYear", [], "any", false, false, false, 20), "html", null, true);
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Label</th>
+                        <td>";
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 22, $this->source); })()), "discLabel", [], "any", false, false, false, 22), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscPicture</th>
-                <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 24, $this->source); })()), "discPicture", [], "any", false, false, false, 24), "html", null, true);
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Genre</th>
+                        <td>";
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 26, $this->source); })()), "discGenre", [], "any", false, false, false, 26), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscLabel</th>
-                <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 28, $this->source); })()), "discLabel", [], "any", false, false, false, 28), "html", null, true);
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Prix</th>
+                        <td>";
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 30, $this->source); })()), "discPrice", [], "any", false, false, false, 30), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscGenre</th>
-                <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 32, $this->source); })()), "discGenre", [], "any", false, false, false, 32), "html", null, true);
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Artiste</th>
+                        <td>";
+        // line 34
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 34, $this->source); })()), "artist", [], "any", false, false, false, 34), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>DiscPrice</th>
-                <td>";
-        // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 36, $this->source); })()), "discPrice", [], "any", false, false, false, 36), "html", null, true);
-        echo "</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href=\"";
-        // line 41
+                    </tr>
+                    <tr>
+                        <th>Illustration</th>
+                       <td> <img src=\"";
+        // line 38
+        echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/") . twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 38, $this->source); })()), "discPicture", [], "any", false, false, false, 38)), "html", null, true);
+        echo "\" alt=\"\"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class=\"d-flex flex-row align-items-center justify-content-center\">
+        <a class=\"btn btn-outline-info ms-1 me-1\" href=\"";
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_index");
-        echo "\">back to list</a>
+        echo "\">Retour à la liste des disques</a>
 
-    <a href=\"";
-        // line 43
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 43, $this->source); })()), "discId", [], "any", false, false, false, 43)]), "html", null, true);
-        echo "\">edit</a>
+        <a class=\"btn btn-outline-warning ms-1 me-1\"
+           href=\"";
+        // line 49
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 49, $this->source); })()), "discId", [], "any", false, false, false, 49)]), "html", null, true);
+        echo "\">Modifier ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 49, $this->source); })()), "discTitle", [], "any", false, false, false, 49), "html", null, true);
+        echo "</a>
 
-    ";
-        // line 45
+        ";
+        // line 51
         echo twig_include($this->env, $context, "disc/_delete_form.html.twig");
         echo "
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -176,56 +187,63 @@ class __TwigTemplate_88ba4dc945e2dd4f8097bdf7c55289afbd3d99fd4c1676f0a2c5037049b
 
     public function getDebugInfo()
     {
-        return array (  156 => 45,  151 => 43,  146 => 41,  138 => 36,  131 => 32,  124 => 28,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  166 => 51,  159 => 49,  153 => 46,  142 => 38,  135 => 34,  128 => 30,  121 => 26,  114 => 22,  107 => 18,  100 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Disc{% endblock %}
+{% block title %}{{ disc.discTitle }}{% endblock %}
 
 {% block body %}
-    <h1>Disc</h1>
+    <u><b><h1 class=\"text-light text-center\">Détails de {{ disc.discTitle }}</h1></b></u>
+    <div class=\"row justify-content-center\">
+        <div class=\"col-auto\">
+            <div class=\"table-responsive col-10\">
+                <table class=\"table table-hover table-bordered table-striped col-9\">
+                    <tbody>
+                    <tr>
+                        <th class=\"text-\">Titre</th>
+                        <td>{{ disc.discTitle }}</td>
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Année</th>
+                        <td>{{ disc.discYear }}</td>
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Label</th>
+                        <td>{{ disc.discLabel }}</td>
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Genre</th>
+                        <td>{{ disc.discGenre }}</td>
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Prix</th>
+                        <td>{{ disc.discPrice }}</td>
+                    </tr>
+                    <tr>
+                        <th class=\"text-\">Artiste</th>
+                        <td>{{ disc.artist }}</td>
+                    </tr>
+                    <tr>
+                        <th>Illustration</th>
+                       <td> <img src=\"{{ asset('image/')~disc.discPicture }}\" alt=\"\"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class=\"d-flex flex-row align-items-center justify-content-center\">
+        <a class=\"btn btn-outline-info ms-1 me-1\" href=\"{{ path('disc_index') }}\">Retour à la liste des disques</a>
 
-    <table class=\"table\">
-        <tbody>
-            <tr>
-                <th>DiscId</th>
-                <td>{{ disc.discId }}</td>
-            </tr>
-            <tr>
-                <th>DiscTitle</th>
-                <td>{{ disc.discTitle }}</td>
-            </tr>
-            <tr>
-                <th>DiscYear</th>
-                <td>{{ disc.discYear }}</td>
-            </tr>
-            <tr>
-                <th>DiscPicture</th>
-                <td>{{ disc.discPicture }}</td>
-            </tr>
-            <tr>
-                <th>DiscLabel</th>
-                <td>{{ disc.discLabel }}</td>
-            </tr>
-            <tr>
-                <th>DiscGenre</th>
-                <td>{{ disc.discGenre }}</td>
-            </tr>
-            <tr>
-                <th>DiscPrice</th>
-                <td>{{ disc.discPrice }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <a class=\"btn btn-outline-warning ms-1 me-1\"
+           href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">Modifier {{ disc.discTitle }}</a>
 
-    <a href=\"{{ path('disc_index') }}\">back to list</a>
-
-    <a href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">edit</a>
-
-    {{ include('disc/_delete_form.html.twig') }}
+        {{ include('disc/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
 ", "disc/show.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\show.html.twig");
     }

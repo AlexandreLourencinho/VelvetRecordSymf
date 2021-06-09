@@ -71,6 +71,7 @@
     <parameter key="kernel.container_class">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
+    <parameter key="disc_directory">C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf/public/image</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>

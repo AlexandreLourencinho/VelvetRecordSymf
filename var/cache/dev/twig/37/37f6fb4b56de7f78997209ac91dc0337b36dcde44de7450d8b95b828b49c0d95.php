@@ -65,7 +65,7 @@ class __TwigTemplate_ee6ba1cf89e18b50da4a29cd940acadd79f44f05a59a09307590449a701
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Disc";
+        echo "Ajouter un disque";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,17 +85,15 @@ class __TwigTemplate_ee6ba1cf89e18b50da4a29cd940acadd79f44f05a59a09307590449a701
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Disc</h1>
-
+        echo "    <h1 class=\"text-center\"><u><b>Ajouter un nouveau disque :</b></u></h1>
     ";
-        // line 8
+        // line 7
         echo twig_include($this->env, $context, "disc/_form.html.twig");
         echo "
-
-    <a class=\"btn btn-info\" href=\"";
-        // line 10
+    <a href=\"";
+        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_index");
-        echo "\">Retour à la liste</a>
+        echo "\">back to list</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,21 +115,19 @@ class __TwigTemplate_ee6ba1cf89e18b50da4a29cd940acadd79f44f05a59a09307590449a701
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Disc{% endblock %}
+{% block title %}Ajouter un disque{% endblock %}
 
 {% block body %}
-    <h1>Create new Disc</h1>
-
+    <h1 class=\"text-center\"><u><b>Ajouter un nouveau disque :</b></u></h1>
     {{ include('disc/_form.html.twig') }}
-
-    <a class=\"btn btn-info\" href=\"{{ path('disc_index') }}\">Retour à la liste</a>
+    <a href=\"{{ path('disc_index') }}\">back to list</a>
 {% endblock %}
 ", "disc/new.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\new.html.twig");
     }

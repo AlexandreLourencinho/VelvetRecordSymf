@@ -40,8 +40,8 @@ class __TwigTemplate_d2018a80dd1f7fd86ea9625dd155dd0ae30e4a7b69ed1e18c5f38d89243
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "disc/_form.html.twig"));
 
         // line 1
-        echo "<div class=\"row\">
-    <div class=\"col-10\">
+        echo "<div class=\"row col-11\">
+    <div class=\"col-12\">
 ";
         // line 3
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 3, $this->source); })()), 'form_start');
@@ -109,8 +109,8 @@ class __TwigTemplate_d2018a80dd1f7fd86ea9625dd155dd0ae30e4a7b69ed1e18c5f38d89243
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"row\">
-    <div class=\"col-10\">
+        return new Source("<div class=\"row col-11\">
+    <div class=\"col-12\">
 {{ form_start(form) }}
     {{ form_row(form.discTitle) }}
     {{ form_row(form.discYear) }}

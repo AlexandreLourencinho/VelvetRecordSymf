@@ -85,90 +85,94 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Disc index</h1>
-
-    <table class=\"table\">
-        <thead>
+        echo "    <div class=\"d-flex justify-content-between align-items-center\">
+        <h1 class=\"text-center\"><u><b>Disc index</b></u></h1>
+        <a class=\"btn btn-secondary\" href=\"";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_new");
+        echo "\">Ajouter un disque</a>
+    </div>
+    <div class=\"table-responsive\">
+        <table class=\"table table-hover table-bordered table-striped\">
+            <thead>
             <tr>
-                <th>DiscId</th>
-                <th>DiscTitle</th>
-                <th>DiscYear</th>
-                <th>DiscPicture</th>
-                <th>DiscLabel</th>
-                <th>DiscGenre</th>
-                <th>DiscPrice</th>
-                <th>actions</th>
+                <th class=\"text-light\">Titre</th>
+                <th class=\"text-light\">Année</th>
+                <th class=\"text-light\">Image</th>
+                <th class=\"text-light\">Label</th>
+                <th class=\"text-light\">Genre</th>
+                <th class=\"text-light\">Prix</th>
+                <th class=\"text-light\">Artiste</th>
+                <th class=\"text-light\">Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 22
+            </thead>
+            <tbody>
+            ";
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["discs"]) || array_key_exists("discs", $context) ? $context["discs"] : (function () { throw new RuntimeError('Variable "discs" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["discs"]) || array_key_exists("discs", $context) ? $context["discs"] : (function () { throw new RuntimeError('Variable "discs" does not exist.', 25, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["disc"]) {
-            // line 23
-            echo "            <tr>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discTitle", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discYear", [], "any", false, false, false, 26), "html", null, true);
-            echo "</td>
-                <td><img src=\"";
+            echo "                <tr>
+                    <td class=\"text-light\">";
             // line 27
-            echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/") . twig_get_attribute($this->env, $this->source, $context["disc"], "discPicture", [], "any", false, false, false, 27)), "html", null, true);
-            echo "\" alt=\"\"></td>
-                <td>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discTitle", [], "any", false, false, false, 27), "html", null, true);
+            echo "</td>
+                    <td class=\"text-light\">";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discLabel", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discYear", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
-                <td>";
+                    <td><img src=\"";
             // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discGenre", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                <td>";
+            echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/") . twig_get_attribute($this->env, $this->source, $context["disc"], "discPicture", [], "any", false, false, false, 29)), "html", null, true);
+            echo "\" alt=\"\"></td>
+                    <td class=\"text-light\">";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discPrice", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discLabel", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
-                <td>
-                    <a href=\"";
+                    <td class=\"text-light\">";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discGenre", [], "any", false, false, false, 31), "html", null, true);
+            echo "</td>
+                    <td class=\"text-light\">";
             // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_show", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discPrice", [], "any", false, false, false, 32), "html", null, true);
+            echo "</td>
+                    <td class=\"text-light\">";
             // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 33)]), "html", null, true);
-            echo "\">edit</a>
-                </td>
-            </tr>
-        ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "artist", [], "any", false, false, false, 33), "html", null, true);
+            echo "</td>
+                    <td>
+                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\" href=\"";
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_show", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 35)]), "html", null, true);
+            echo "\">Détails</a>
+                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\" href=\"";
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 36)]), "html", null, true);
+            echo "\">Modifier</a>
+                    </td>
+                </tr>
+            ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 37
-            echo "            <tr>
-                <td colspan=\"8\">no records found</td>
-            </tr>
-        ";
+            // line 40
+            echo "                <tr>
+                    <td colspan=\"8\">no records found</td>
+                </tr>
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['disc'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
-        echo "        </tbody>
-    </table>
-
-    <a href=\"";
         // line 44
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_new");
-        echo "\">Create new</a>
+        echo "            </tbody>
+        </table>
+    </div>
+
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -190,7 +194,7 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
 
     public function getDebugInfo()
     {
-        return array (  170 => 44,  165 => 41,  156 => 37,  147 => 33,  143 => 32,  138 => 30,  134 => 29,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  171 => 44,  162 => 40,  153 => 36,  149 => 35,  144 => 33,  140 => 32,  136 => 31,  132 => 30,  128 => 29,  124 => 28,  120 => 27,  117 => 26,  112 => 25,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -200,45 +204,49 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
 {% block title %}Disc index{% endblock %}
 
 {% block body %}
-    <h1>Disc index</h1>
+    <div class=\"d-flex justify-content-between align-items-center\">
+        <h1 class=\"text-center\"><u><b>Disc index</b></u></h1>
+        <a class=\"btn btn-secondary\" href=\"{{ path('disc_new') }}\">Ajouter un disque</a>
+    </div>
+    <div class=\"table-responsive\">
+        <table class=\"table table-hover table-bordered table-striped\">
+            <thead>
+            <tr>
+                <th class=\"text-light\">Titre</th>
+                <th class=\"text-light\">Année</th>
+                <th class=\"text-light\">Image</th>
+                <th class=\"text-light\">Label</th>
+                <th class=\"text-light\">Genre</th>
+                <th class=\"text-light\">Prix</th>
+                <th class=\"text-light\">Artiste</th>
+                <th class=\"text-light\">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for disc in discs %}
+                <tr>
+                    <td class=\"text-light\">{{ disc.discTitle }}</td>
+                    <td class=\"text-light\">{{ disc.discYear }}</td>
+                    <td><img src=\"{{ asset('image/')~disc.discPicture }}\" alt=\"\"></td>
+                    <td class=\"text-light\">{{ disc.discLabel }}</td>
+                    <td class=\"text-light\">{{ disc.discGenre }}</td>
+                    <td class=\"text-light\">{{ disc.discPrice }}</td>
+                    <td class=\"text-light\">{{ disc.artist }}</td>
+                    <td>
+                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\" href=\"{{ path('disc_show', {'discId': disc.discId}) }}\">Détails</a>
+                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\" href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan=\"8\">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>DiscId</th>
-                <th>DiscTitle</th>
-                <th>DiscYear</th>
-                <th>DiscPicture</th>
-                <th>DiscLabel</th>
-                <th>DiscGenre</th>
-                <th>DiscPrice</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for disc in discs %}
-            <tr>
-                <td>{{ disc.discId }}</td>
-                <td>{{ disc.discTitle }}</td>
-                <td>{{ disc.discYear }}</td>
-                <td><img src=\"{{ asset('image/')~disc.discPicture }}\" alt=\"\"></td>
-                <td>{{ disc.discLabel }}</td>
-                <td>{{ disc.discGenre }}</td>
-                <td>{{ disc.discPrice }}</td>
-                <td>
-                    <a href=\"{{ path('disc_show', {'discId': disc.discId}) }}\">show</a>
-                    <a href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"8\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <a href=\"{{ path('disc_new') }}\">Create new</a>
 {% endblock %}
 ", "disc/index.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\index.html.twig");
     }

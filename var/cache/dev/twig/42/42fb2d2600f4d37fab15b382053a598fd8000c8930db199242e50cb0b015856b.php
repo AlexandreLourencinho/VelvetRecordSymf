@@ -65,7 +65,8 @@ class __TwigTemplate_f43433591ebd210b555e69210611f2dc9e06967f63010e48ce6df071245
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Edit Disc";
+        echo "Modifier le disque ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 3, $this->source); })()), "discTitle", [], "any", false, false, false, 3), "html", null, true);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -124,14 +125,14 @@ class __TwigTemplate_f43433591ebd210b555e69210611f2dc9e06967f63010e48ce6df071245
 
     public function getDebugInfo()
     {
-        return array (  102 => 10,  98 => 9,  94 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 10,  99 => 9,  95 => 8,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Edit Disc{% endblock %}
+{% block title %}Modifier le disque {{ disc.discTitle }}{% endblock %}
 
 {% block body %}
     <h1><u><b>Modifier \"{{ disc.discTitle }}\"</b></u></h1>

@@ -68,10 +68,13 @@ class __TwigTemplate_496c183575f7a3edc45eaa1334d1eede7529ffcfb10c994ad96fcb4aedc
         echo "
 
 
-<h1 class=\"text-light text-center mt-5\"><u><b>Bienvenue sur Velvet Record!</b></u> </h1>
-
-
-
+<h1 class=\"text-light text-center mt-5 mb-5\"><u><b>Bienvenue sur Velvet Record!</b></u> </h1>
+<div class=\"d-flex justify-content-center mt-5\">
+    <img src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/image_crud.png"), "html", null, true);
+        echo "\" class=\"mt-5\" alt=\"\">
+</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -93,7 +96,7 @@ class __TwigTemplate_496c183575f7a3edc45eaa1334d1eede7529ffcfb10c994ad96fcb4aedc
 
     public function getDebugInfo()
     {
-        return array (  68 => 4,  58 => 3,  35 => 1,);
+        return array (  75 => 9,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -104,10 +107,10 @@ class __TwigTemplate_496c183575f7a3edc45eaa1334d1eede7529ffcfb10c994ad96fcb4aedc
 
 
 
-<h1 class=\"text-light text-center mt-5\"><u><b>Bienvenue sur Velvet Record!</b></u> </h1>
-
-
-
+<h1 class=\"text-light text-center mt-5 mb-5\"><u><b>Bienvenue sur Velvet Record!</b></u> </h1>
+<div class=\"d-flex justify-content-center mt-5\">
+    <img src=\"{{ asset('image/image_crud.png') }}\" class=\"mt-5\" alt=\"\">
+</div>
 {% endblock %}", "accueil/accueil.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\accueil\\accueil.html.twig");
     }
 }

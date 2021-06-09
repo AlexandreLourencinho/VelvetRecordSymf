@@ -6,8 +6,15 @@ body{
     background-image: url("../image/fond.jpg")!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
+    min-height: 100vh !important;
+    display: grid !important;
+    grid-template-rows: auto 1fr auto !important;
 }
 
 nav.navbar-dark{
+    background-color: rgba(0,0,0,0.6) !important;
+}
+
+footer.bleh{
     background-color: rgba(0,0,0,0.6) !important;
 }

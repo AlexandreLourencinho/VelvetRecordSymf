@@ -47,7 +47,7 @@ class __TwigTemplate_be647eb5c959b608b2c501a84d9747c314ca51e98ccf4df183306ce6a2f
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["disc"]) || array_key_exists("disc", $context) ? $context["disc"] : (function () { throw new RuntimeError('Variable "disc" does not exist.', 2, $this->source); })()), "discId", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn btn-danger\">Supprimer</button>
+    <button class=\"btn btn-outline-danger ms-1\">Supprimer</button>
 </form>
 ";
         
@@ -77,7 +77,7 @@ class __TwigTemplate_be647eb5c959b608b2c501a84d9747c314ca51e98ccf4df183306ce6a2f
     {
         return new Source("<form method=\"post\" action=\"{{ path('disc_delete', {'discId': disc.discId}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ disc.discId) }}\">
-    <button class=\"btn btn-danger\">Supprimer</button>
+    <button class=\"btn btn-outline-danger ms-1\">Supprimer</button>
 </form>
 ", "disc/_delete_form.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\_delete_form.html.twig");
     }

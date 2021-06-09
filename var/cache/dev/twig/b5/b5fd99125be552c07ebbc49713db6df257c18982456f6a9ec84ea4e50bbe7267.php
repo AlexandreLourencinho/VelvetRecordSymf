@@ -52,21 +52,25 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">
-        <link rel=\"stylesheet\" href=\"";
+";
         // line 7
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style1.css"), "html", null, true);
         echo "\">
         ";
-        // line 10
+        // line 11
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 13
+        // line 14
         echo "
         ";
-        // line 14
+        // line 15
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 17
+        // line 18
         echo "    </head>
     <body>
     <header class=\"sticky-top\">
@@ -80,19 +84,19 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
                     <ul class=\"navbar-nav\">
                         <li class=\"nav-item\">
                             <a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 29
+        // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Accueil</a>
                         </li>
                         <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"";
-        // line 32
+                            <a class=\"nav-link active\" href=\"";
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_index");
         echo "\">Disques</a>
                         </li>
                         <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"";
-        // line 35
+                            <a class=\"nav-link active\" href=\"";
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("artist_index");
         echo "\">Artistes</a>
                         </li>
@@ -101,16 +105,58 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
             </div>
         </nav>
     </header>
-    <div class=\"container\">
+    <div class=\"container-fluid\">
         <div class=\"col-12\">
 
         ";
-        // line 45
-        $this->displayBlock('body', $context, $blocks);
         // line 46
+        $this->displayBlock('body', $context, $blocks);
+        // line 47
         echo "    </div>
     </div>
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4\" crossorigin=\"anonymous\"></script>
+    <!--colonne 1-->
+    <footer class=\"d-flex col-12 justify-content-between bg-dark bleh ml-1\">
+        <div class=\"d-flex flex-column col-6 col-md-4 border border-dark\">
+            <p class=\"h4\"><u class=\" footitre text-light\">Copyright Lourencinho Alexandre ©</u></p>
+            <p class=\"text-light\">Ce travail a été réalisé dans le cadre de l'évaluation consacré au php de la formation
+                de </p>
+            <p class=\"text-light\">concepteur
+                développeur d'application à l'AFPA d'Amiens. Toute reproduction non </p>
+            <p class=\"text-light\">consentie est strictement interdite.</p>
+        </div>
+        <!--    colonne 2 - liens de contact-->
+        <div class=\"d-flex flex-column col-6 col-md-4 border border-dark\">
+            <p class=\"h4 text-light text-center\"><u>Liens de contact</u></p>
+            <p class=\"text-light text-center\">Vous pouvez me contacter par les moyens suivants :</p>
+            <ul>
+                <li><a target=\"_blank\" href=\"https://github.com/AlexandreLourencinho\"
+                       title=\"Lien vers le github de Lourencinho Alexandre\" class=\"text-info\">Mon github</a></li>
+                <li><a target=\"_blank\" href=\"https://discord.gg/kFWCtWQDMf\"
+                       title=\"lien vers le discord de Lourencinho Alexandre\" class=\"text-info\">Mon discord</a></li>
+                <li>
+                    <a href=\"mailto:lourencinho.alexandre@protonmail.com?subject=Contact%20depuis%20votre%20évaluation%20php%20de%20CDA\"
+                       title=\"lien pour envoyer un mail a Lourencinho Alexandre\" class=\"text-info\">M'envoyer un mail</a>
+                </li>
+                <li><a target=\"_blank\" href=\"#\" class=\"text-info\" title=\"lien vers le linkedin de Lourencinho Alexandre\">Mon
+                        linkedin</a></li>
+            </ul>
+        </div>
+        <!--    colonne trois, sites partenaires ^^'-->
+        <div class=\"d-flex flex-column col-4 border border-dark d-none d-md-block\">
+            <p class=\"h4\"><u class=\"footitre text-light\">Sites partenaires</u></p>
+            <p class=\"text-light\">Les liens vers nos sites affiliés.</p>
+            <ul>
+                <li class=\" d-md-block d-none\"><a target=\"_blank\" href=\"https://ncode.amorce.org/\" class=\"text-info\"
+                                                  title=\"lien de la plate-forme support utilisée\">ncode amorce</a></li>
+                <li class=\"d-md-block d-none\"><a target=\"_blank\" href=\"https://www.php.net/manual/fr/\" class=\"text-info\"
+                                                 title=\"Lien vers la doc php\">php.net aka lisez la doc!</a></li>
+                <li class=\"d-md-block d-none\"><a target=\"_blank\" href=\"https://www.afpa.fr\"
+                                                 title=\"Lien vers le site de l'afpa\" class=\"text-info\">afpa.fr, l'organisme
+                        dispensant cette formation</a></li>
+            </ul>
+        </div>
+    </footer>
     </body>
 </html>
 ";
@@ -141,7 +187,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
 
     }
 
-    // line 10
+    // line 11
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -151,9 +197,9 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 11
-        echo "            ";
         // line 12
+        echo "            ";
+        // line 13
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -163,7 +209,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
 
     }
 
-    // line 14
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -173,9 +219,9 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 15
-        echo "            ";
         // line 16
+        echo "            ";
+        // line 17
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -185,7 +231,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
 
     }
 
-    // line 45
+    // line 46
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -215,7 +261,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
 
     public function getDebugInfo()
     {
-        return array (  189 => 45,  179 => 16,  177 => 15,  167 => 14,  157 => 12,  155 => 11,  145 => 10,  126 => 5,  111 => 46,  109 => 45,  96 => 35,  90 => 32,  84 => 29,  70 => 17,  68 => 14,  65 => 13,  62 => 10,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  235 => 46,  225 => 17,  223 => 16,  213 => 15,  203 => 13,  201 => 12,  191 => 11,  172 => 5,  115 => 47,  113 => 46,  100 => 36,  94 => 33,  88 => 30,  74 => 18,  72 => 15,  69 => 14,  66 => 11,  62 => 8,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -225,7 +271,8 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">
+{#        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">#}
+        <link rel=\"stylesheet\" href=\"{{ asset('css/bootstrap.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/style1.css') }}\">
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
@@ -251,23 +298,65 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
                             <a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('accueil') }}\">Accueil</a>
                         </li>
                         <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"{{ path('disc_index') }}\">Disques</a>
+                            <a class=\"nav-link active\" href=\"{{ path('disc_index') }}\">Disques</a>
                         </li>
                         <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"{{ path('artist_index') }}\">Artistes</a>
+                            <a class=\"nav-link active\" href=\"{{ path('artist_index') }}\">Artistes</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class=\"container\">
+    <div class=\"container-fluid\">
         <div class=\"col-12\">
 
         {% block body %}{% endblock %}
     </div>
     </div>
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4\" crossorigin=\"anonymous\"></script>
+    <!--colonne 1-->
+    <footer class=\"d-flex col-12 justify-content-between bg-dark bleh ml-1\">
+        <div class=\"d-flex flex-column col-6 col-md-4 border border-dark\">
+            <p class=\"h4\"><u class=\" footitre text-light\">Copyright Lourencinho Alexandre ©</u></p>
+            <p class=\"text-light\">Ce travail a été réalisé dans le cadre de l'évaluation consacré au php de la formation
+                de </p>
+            <p class=\"text-light\">concepteur
+                développeur d'application à l'AFPA d'Amiens. Toute reproduction non </p>
+            <p class=\"text-light\">consentie est strictement interdite.</p>
+        </div>
+        <!--    colonne 2 - liens de contact-->
+        <div class=\"d-flex flex-column col-6 col-md-4 border border-dark\">
+            <p class=\"h4 text-light text-center\"><u>Liens de contact</u></p>
+            <p class=\"text-light text-center\">Vous pouvez me contacter par les moyens suivants :</p>
+            <ul>
+                <li><a target=\"_blank\" href=\"https://github.com/AlexandreLourencinho\"
+                       title=\"Lien vers le github de Lourencinho Alexandre\" class=\"text-info\">Mon github</a></li>
+                <li><a target=\"_blank\" href=\"https://discord.gg/kFWCtWQDMf\"
+                       title=\"lien vers le discord de Lourencinho Alexandre\" class=\"text-info\">Mon discord</a></li>
+                <li>
+                    <a href=\"mailto:lourencinho.alexandre@protonmail.com?subject=Contact%20depuis%20votre%20évaluation%20php%20de%20CDA\"
+                       title=\"lien pour envoyer un mail a Lourencinho Alexandre\" class=\"text-info\">M'envoyer un mail</a>
+                </li>
+                <li><a target=\"_blank\" href=\"#\" class=\"text-info\" title=\"lien vers le linkedin de Lourencinho Alexandre\">Mon
+                        linkedin</a></li>
+            </ul>
+        </div>
+        <!--    colonne trois, sites partenaires ^^'-->
+        <div class=\"d-flex flex-column col-4 border border-dark d-none d-md-block\">
+            <p class=\"h4\"><u class=\"footitre text-light\">Sites partenaires</u></p>
+            <p class=\"text-light\">Les liens vers nos sites affiliés.</p>
+            <ul>
+                <li class=\" d-md-block d-none\"><a target=\"_blank\" href=\"https://ncode.amorce.org/\" class=\"text-info\"
+                                                  title=\"lien de la plate-forme support utilisée\">ncode amorce</a></li>
+                <li class=\"d-md-block d-none\"><a target=\"_blank\" href=\"https://www.php.net/manual/fr/\" class=\"text-info\"
+                                                 title=\"Lien vers la doc php\">php.net aka lisez la doc!</a></li>
+                <li class=\"d-md-block d-none\"><a target=\"_blank\" href=\"https://www.afpa.fr\"
+                                                 title=\"Lien vers le site de l'afpa\" class=\"text-info\">afpa.fr, l'organisme
+                        dispensant cette formation</a></li>
+            </ul>
+        </div>
+    </footer>
     </body>
 </html>
 ", "base.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\base.html.twig");
