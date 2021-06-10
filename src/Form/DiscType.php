@@ -31,7 +31,7 @@ class DiscType extends AbstractType
                     ]),
                 ]
             ])
-            ->add('discYear', IntegerType::class, [
+            ->add('discYear', TextType::class, [
                 'label' => 'Année de sortie du disque',
                 'help' => 'Indiquez l\'année de sortie du disque (4 chiffres s\'il vous plait ne mettez pas de lettre parce que ma regex elle marche plus)',
                 'attr' => [
@@ -39,8 +39,7 @@ class DiscType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                    'pattern'=>'#[0-9]{4}#',
-                       'match'=>false,
+                    'pattern' => '/^[\d]+$/',
                         'message' => 'Caractère(s) non valide(s)'
                     ]),
                 ]

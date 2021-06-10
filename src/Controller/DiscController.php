@@ -79,6 +79,7 @@ class DiscController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/{discId}", name="disc_show", methods={"GET"})
      */
