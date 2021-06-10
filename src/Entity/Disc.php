@@ -90,12 +90,12 @@ class Disc
         return $this;
     }
 
-    public function getDiscYear(): ?int
+    public function getDiscYear(): ?float
     {
         return $this->discYear;
     }
 
-    public function setDiscYear(?int $discYear): self
+    public function setDiscYear(?float $discYear): self
     {
         $this->discYear = $discYear;
 

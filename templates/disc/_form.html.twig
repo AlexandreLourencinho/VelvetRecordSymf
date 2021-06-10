@@ -1,7 +1,9 @@
 <div class="row col-11">
     <div class="col-12">
-{{ form_start(form) }}
-    {{ form_row(form.discTitle) }}
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+{{ form_label(form.discTitle) }}
+{{ form_widget(form.discTitle) }}
+{{ form_help(form.discTitle) }}
     {{ form_row(form.discYear) }}
     {{ form_row(form.discLabel) }}
     {{ form_row(form.discPrice) }}
