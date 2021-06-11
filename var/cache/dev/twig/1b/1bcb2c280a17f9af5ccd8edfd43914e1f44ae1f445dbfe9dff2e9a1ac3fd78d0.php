@@ -71,6 +71,6 @@ class __TwigTemplate_37a5f8975b287abc29e6a387f744518b2d2136a513bb9051e41a0e25feb
     public function getSourceContext()
     {
         return new Source("{% extends \"@email/zurb_2/notification/body.html.twig\" %}
-", "@email/default/notification/body.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\default\\notification\\body.html.twig");
+", "@email/default/notification/body.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\default\\notification\\body.html.twig");
     }
 }

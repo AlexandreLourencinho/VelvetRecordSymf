@@ -212,6 +212,6 @@ class __TwigTemplate_8d794533063e5d5904b1b67475b4b0be61b891edaa9ffa48a5c02e24c8c
 
     <a href=\"{{ path('artist_new') }}\">Create new</a>
 {% endblock %}
-", "artist/index.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\artist\\index.html.twig");
+", "artist/index.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\artist\\index.html.twig");
     }
 }

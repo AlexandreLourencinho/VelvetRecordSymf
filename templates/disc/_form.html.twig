@@ -1,16 +1,16 @@
 <div class="row col-11">
     <div class="col-12">
-{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-{{ form_label(form.discTitle) }}
-{{ form_widget(form.discTitle) }}
-{{ form_help(form.discTitle) }}
-    {{ form_row(form.discYear) }}
-    {{ form_row(form.discLabel) }}
-    {{ form_row(form.discPrice) }}
-    {{ form_row(form.discGenre) }}
-    {{ form_row(form.discPicture) }}
-    {{ form_row(form.artist) }}
-    <button class="btn btn-success mb-2 mt-2">{{ button_label|default('Ajouter') }}</button>
-{{ form_end(form) }}
-</div>
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        <p class="text-center">{{ form_label(form.discTitle) }}</p>
+        {{ form_widget(form.discTitle) }}
+        {{ form_help(form.discTitle) }}
+        {{ form_row(form.discYear) }}
+        {{ form_row(form.discLabel) }}
+        {{ form_row(form.discPrice) }}
+        {{ form_row(form.discGenre) }}
+        {{ form_row(form.artist) }}
+        {{ form_row(form.discPicture) }}
+        <button class="btn btn-success mb-2 mt-2">{{ button_label|default('Ajouter') }}</button>
+        {{ form_end(form) }}
+    </div>
 </div>

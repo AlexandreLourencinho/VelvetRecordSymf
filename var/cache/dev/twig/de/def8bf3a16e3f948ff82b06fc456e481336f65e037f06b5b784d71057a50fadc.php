@@ -85,94 +85,90 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"d-flex justify-content-between align-items-center\">
-        <h1 class=\"text-center\"><u><b>Disc index</b></u></h1>
-        <a class=\"btn btn-secondary\" href=\"";
+        echo "    <div class=\"d-flex justify-content-around align-items-center\">
+    <h1 class=\"col-6\">Disques (";
+        // line 7
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["nombre"]) || array_key_exists("nombre", $context) ? $context["nombre"] : (function () { throw new RuntimeError('Variable "nombre" does not exist.', 7, $this->source); })()), "nbre", [], "any", false, false, false, 7), "html", null, true);
+        echo ")</h1>
+    <a class=\"btn btn-secondary\" href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_new");
         echo "\">Ajouter un disque</a>
     </div>
-    <div class=\"table-responsive\">
-        <table class=\"table table-hover table-bordered table-striped\">
-            <thead>
-            <tr>
-                <th class=\"text-light\">Titre</th>
-                <th class=\"text-light\">Année</th>
-                <th class=\"text-light\">Image</th>
-                <th class=\"text-light\">Label</th>
-                <th class=\"text-light\">Genre</th>
-                <th class=\"text-light\">Prix</th>
-                <th class=\"text-light\">Artiste</th>
-                <th class=\"text-light\">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            ";
-        // line 25
+    <div class=\"row row-cols-1 row-cols-md-3 g-4\">
+        ";
+        // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["discs"]) || array_key_exists("discs", $context) ? $context["discs"] : (function () { throw new RuntimeError('Variable "discs" does not exist.', 25, $this->source); })()));
-        $context['_iterated'] = false;
+        $context['_seq'] = twig_ensure_traversable((isset($context["discs"]) || array_key_exists("discs", $context) ? $context["discs"] : (function () { throw new RuntimeError('Variable "discs" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["disc"]) {
+            // line 12
+            echo "            <div class=\"col\">
+                <div class=\"card me-3\">
+                    <div class=\"card-header\">
+                        <h5 class=\"card-title text-center\"><span
+                                    class=\"text-light\"><u><b>Titre de l'album : </b></u></span> ";
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discTitle", [], "any", false, false, false, 16), "html", null, true);
+            echo "</h5>
+                    </div>
+                    <div class=\"d-flex justify-content-center\">
+                    <img class=\"card-img-top\" src=\"";
+            // line 19
+            echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/") . twig_get_attribute($this->env, $this->source, $context["disc"], "discPicture", [], "any", false, false, false, 19)), "html", null, true);
+            echo "\" alt=\"Card image cap\">
+                    </div>
+                    <div class=\"card-body\">
+                        <p class=\"card-text  text-center\"><span class=\"text-light\">Année de sortie : </span> ";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discYear", [], "any", false, false, false, 22), "html", null, true);
+            echo "</p>
+                    </div>
+                    <div class=\"d-flex justify-content-center\">
+                    <ul class=\"list-group list-group-flush\">
+                        <li class=\"list-group-item\"><span class=\"text-light\">Libellé : </span>  ";
             // line 26
-            echo "                <tr>
-                    <td class=\"text-light\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discLabel", [], "any", false, false, false, 26), "html", null, true);
+            echo "</li>
+                        <li class=\"list-group-item\"><span class=\"text-light\">Genre : </span> ";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discTitle", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
-                    <td class=\"text-light\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discGenre", [], "any", false, false, false, 27), "html", null, true);
+            echo "</li>
+                        <li class=\"list-group-item\"><span class=\"text-light\">Prix : </span> ";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discYear", [], "any", false, false, false, 28), "html", null, true);
-            echo "</td>
-                    <td><img src=\"";
-            // line 29
-            echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/") . twig_get_attribute($this->env, $this->source, $context["disc"], "discPicture", [], "any", false, false, false, 29)), "html", null, true);
-            echo "\" alt=\"\"></td>
-                    <td class=\"text-light\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discPrice", [], "any", false, false, false, 28), "html", null, true);
+            echo "</li>
+                        <li class=\"list-group-item\"><span
+                                    class=\"text-light\">Groupe/artiste(s) : </span> ";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discLabel", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                    <td class=\"text-light\">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discGenre", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                    <td class=\"text-light\">";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "discPrice", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-                    <td class=\"text-light\">";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "artist", [], "any", false, false, false, 33), "html", null, true);
-            echo "</td>
-                    <td>
-                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\" href=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["disc"], "artist", [], "any", false, false, false, 30), "html", null, true);
+            echo "</li>
+                    </ul>
+                    </div>
+                    <div class=\"card-body d-flex justify-content-center\">
+                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\"
+                           href=\"";
             // line 35
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_show", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\">Détails</a>
-                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\" href=\"";
-            // line 36
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 36)]), "html", null, true);
+                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\"
+                           href=\"";
+            // line 37
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("disc_edit", ["discId" => twig_get_attribute($this->env, $this->source, $context["disc"], "discId", [], "any", false, false, false, 37)]), "html", null, true);
             echo "\">Modifier</a>
-                    </td>
-                </tr>
-            ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 40
-            echo "                <tr>
-                    <td colspan=\"8\">no records found</td>
-                </tr>
-            ";
+                    </div>
+                </div>
+            </div>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['disc'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
-        echo "            </tbody>
-        </table>
+        // line 42
+        echo "    </div>
     </div>
-
-
+";
+        // line 45
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -194,7 +190,7 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
 
     public function getDebugInfo()
     {
-        return array (  171 => 44,  162 => 40,  153 => 36,  149 => 35,  144 => 33,  140 => 32,  136 => 31,  132 => 30,  128 => 29,  124 => 28,  120 => 27,  117 => 26,  112 => 25,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  171 => 45,  167 => 42,  156 => 37,  151 => 35,  143 => 30,  138 => 28,  134 => 27,  130 => 26,  123 => 22,  117 => 19,  111 => 16,  105 => 12,  101 => 11,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -204,50 +200,47 @@ class __TwigTemplate_68318d4998d65396da1f18348704f90234ad85e235e36fe717a59ae2cd5
 {% block title %}Disc index{% endblock %}
 
 {% block body %}
-    <div class=\"d-flex justify-content-between align-items-center\">
-        <h1 class=\"text-center\"><u><b>Disc index</b></u></h1>
-        <a class=\"btn btn-secondary\" href=\"{{ path('disc_new') }}\">Ajouter un disque</a>
+    <div class=\"d-flex justify-content-around align-items-center\">
+    <h1 class=\"col-6\">Disques ({{ nombre.nbre }})</h1>
+    <a class=\"btn btn-secondary\" href=\"{{ path('disc_new') }}\">Ajouter un disque</a>
     </div>
-    <div class=\"table-responsive\">
-        <table class=\"table table-hover table-bordered table-striped\">
-            <thead>
-            <tr>
-                <th class=\"text-light\">Titre</th>
-                <th class=\"text-light\">Année</th>
-                <th class=\"text-light\">Image</th>
-                <th class=\"text-light\">Label</th>
-                <th class=\"text-light\">Genre</th>
-                <th class=\"text-light\">Prix</th>
-                <th class=\"text-light\">Artiste</th>
-                <th class=\"text-light\">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for disc in discs %}
-                <tr>
-                    <td class=\"text-light\">{{ disc.discTitle }}</td>
-                    <td class=\"text-light\">{{ disc.discYear }}</td>
-                    <td><img src=\"{{ asset('image/')~disc.discPicture }}\" alt=\"\"></td>
-                    <td class=\"text-light\">{{ disc.discLabel }}</td>
-                    <td class=\"text-light\">{{ disc.discGenre }}</td>
-                    <td class=\"text-light\">{{ disc.discPrice }}</td>
-                    <td class=\"text-light\">{{ disc.artist }}</td>
-                    <td>
-                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\" href=\"{{ path('disc_show', {'discId': disc.discId}) }}\">Détails</a>
-                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\" href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">Modifier</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan=\"8\">no records found</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+    <div class=\"row row-cols-1 row-cols-md-3 g-4\">
+        {% for disc in discs %}
+            <div class=\"col\">
+                <div class=\"card me-3\">
+                    <div class=\"card-header\">
+                        <h5 class=\"card-title text-center\"><span
+                                    class=\"text-light\"><u><b>Titre de l'album : </b></u></span> {{ disc.discTitle }}</h5>
+                    </div>
+                    <div class=\"d-flex justify-content-center\">
+                    <img class=\"card-img-top\" src=\"{{ asset('image/')~disc.discPicture }}\" alt=\"Card image cap\">
+                    </div>
+                    <div class=\"card-body\">
+                        <p class=\"card-text  text-center\"><span class=\"text-light\">Année de sortie : </span> {{ disc.discYear }}</p>
+                    </div>
+                    <div class=\"d-flex justify-content-center\">
+                    <ul class=\"list-group list-group-flush\">
+                        <li class=\"list-group-item\"><span class=\"text-light\">Libellé : </span>  {{ disc.discLabel }}</li>
+                        <li class=\"list-group-item\"><span class=\"text-light\">Genre : </span> {{ disc.discGenre }}</li>
+                        <li class=\"list-group-item\"><span class=\"text-light\">Prix : </span> {{ disc.discPrice }}</li>
+                        <li class=\"list-group-item\"><span
+                                    class=\"text-light\">Groupe/artiste(s) : </span> {{ disc.artist }}</li>
+                    </ul>
+                    </div>
+                    <div class=\"card-body d-flex justify-content-center\">
+                        <a class=\"btn btn-outline-info me-1 mb-1 mb-xl-0\"
+                           href=\"{{ path('disc_show', {'discId': disc.discId}) }}\">Détails</a>
+                        <a class=\"btn btn-outline-warning ms-1 mt-1 mt-xl-0\"
+                           href=\"{{ path('disc_edit', {'discId': disc.discId}) }}\">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-
+    </div>
+{#    {{ dump(nombre) }}#}
 
 {% endblock %}
-", "disc/index.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\index.html.twig");
+", "disc/index.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\disc\\index.html.twig");
     }
 }

@@ -133,6 +133,6 @@ class __TwigTemplate_1ef28a607d4c6a1dfdc588834acfec7ae769b2670353d89d14402002be2
 
     <a href=\"{{ path('droits_index') }}\">back to list</a>
 {% endblock %}
-", "droits/new.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\droits\\new.html.twig");
+", "droits/new.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\droits\\new.html.twig");
     }
 }

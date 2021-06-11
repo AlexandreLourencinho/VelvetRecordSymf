@@ -104,6 +104,6 @@ class __TwigTemplate_bf72230afc811fb83abd973c00dac69d386560c0d2e1c83427e6b56d85c
   {{ include('@Twig/Exception/trace.txt.twig', { trace: trace }, with_context = false) }}
 {% endfor %}
 {% endif %}
-", "@Twig/Exception/traces.txt.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.txt.twig");
+", "@Twig/Exception/traces.txt.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.txt.twig");
     }
 }

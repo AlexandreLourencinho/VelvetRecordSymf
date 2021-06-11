@@ -111,6 +111,6 @@ class __TwigTemplate_496c183575f7a3edc45eaa1334d1eede7529ffcfb10c994ad96fcb4aedc
 <div class=\"d-flex justify-content-center mt-5\">
     <img src=\"{{ asset('image/image_crud.png') }}\" class=\"mt-5\" alt=\"\">
 </div>
-{% endblock %}", "accueil/accueil.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\accueil\\accueil.html.twig");
+{% endblock %}", "accueil/accueil.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\accueil\\accueil.html.twig");
     }
 }

@@ -5,5 +5,5 @@
 {% block body %}
     <h1 class="text-center"><u><b>Ajouter un nouveau disque :</b></u></h1>
     {{ include('disc/_form.html.twig') }}
-    <a href="{{ path('disc_index') }}">back to list</a>
+    <a class="btn btn-dark" href="{{ path('disc_index') }}">Retour à la liste des disques</a>
 {% endblock %}

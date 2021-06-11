@@ -71,6 +71,6 @@ class __TwigTemplate_b599253dc2915854a74999447abe4a48756683b0e23a6f7dcbadc4d83fb
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'choice_widget_collapsed') ?>
 <?php endif ?>
-", "@Framework/Form/choice_widget.html.php", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget.html.php");
+", "@Framework/Form/choice_widget.html.php", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget.html.php");
     }
 }

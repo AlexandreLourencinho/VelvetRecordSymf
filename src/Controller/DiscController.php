@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Disc;
 use App\Form\DiscType;
+use App\Repository\DiscRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,9 +26,10 @@ class DiscController extends AbstractController
         $discs = $this->getDoctrine()
             ->getRepository(Disc::class)
             ->findAll();
+        $nombre = $this->getDoctrine()->getRepository(Disc::class)->compteurDisques();
 
         return $this->render('disc/index.html.twig', [
-            'discs' => $discs,
+            'discs' => $discs, 'nombre'=>$nombre[0]
         ]);
     }
 

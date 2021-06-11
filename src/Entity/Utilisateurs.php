@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Utilisateurs
  *
- * @ORM\Table(name="utilisateurs", uniqueConstraints={@ORM\UniqueConstraint(name="utilisateurs_mail_utilisateur_uindex", columns={"mail_utilisateur"}), @ORM\UniqueConstraint(name="utilisateurs_nom_utilisateur_uindex", columns={"nom_utilisateur"}), @ORM\UniqueConstraint(name="utilisateurs_token_recup_uindex", columns={"token_recup"})}, indexes={@ORM\Index(name="droits_id", columns={"droits_id"})})
+ * @ORM\Table(name="utilisateurs", uniqueConstraints={@ORM\UniqueConstraint(name="utilisateurs_token_recup_uindex", columns={"token_recup"}), @ORM\UniqueConstraint(name="utilisateurs_mail_utilisateur_uindex", columns={"mail_utilisateur"}), @ORM\UniqueConstraint(name="utilisateurs_nom_utilisateur_uindex", columns={"nom_utilisateur"})}, indexes={@ORM\Index(name="id_droits", columns={"id_droits"})})
  * @ORM\Entity
  */
 class Utilisateurs
@@ -54,10 +54,10 @@ class Utilisateurs
      *
      * @ORM\ManyToOne(targetEntity="Droits")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="droits_id", referencedColumnName="droits_id")
+     *   @ORM\JoinColumn(name="id_droits", referencedColumnName="id_droit")
      * })
      */
-    private $droits;
+    private $idDroits;
 
     public function getUtilisateurId(): ?int
     {
@@ -112,14 +112,14 @@ class Utilisateurs
         return $this;
     }
 
-    public function getDroits(): ?Droits
+    public function getIdDroits(): ?Droits
     {
-        return $this->droits;
+        return $this->idDroits;
     }
 
-    public function setDroits(?Droits $droits): self
+    public function setIdDroits(?Droits $idDroits): self
     {
-        $this->droits = $droits;
+        $this->idDroits = $idDroits;
 
         return $this;
     }

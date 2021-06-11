@@ -65,7 +65,7 @@ class Artist
     }
 
     public function __tostring():string{
-return $this->artistName;
+        return $this->artistName;
     }
 
 }

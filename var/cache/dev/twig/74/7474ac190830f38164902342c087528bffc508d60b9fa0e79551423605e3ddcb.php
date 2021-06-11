@@ -140,6 +140,6 @@ class __TwigTemplate_6765930c8dd65c05f7b73af27ad560ea102e11383be25333b90cb7c0410
 
     {{ include('artist/_delete_form.html.twig') }}
 {% endblock %}
-", "artist/edit.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\artist\\edit.html.twig");
+", "artist/edit.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\artist\\edit.html.twig");
     }
 }

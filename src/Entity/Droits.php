@@ -15,11 +15,11 @@ class Droits
     /**
      * @var int
      *
-     * @ORM\Column(name="droits_id", type="integer", nullable=false)
+     * @ORM\Column(name="id_droit", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $droitsId;
+    private $idDroit;
 
     /**
      * @var int
@@ -35,9 +35,9 @@ class Droits
      */
     private $labelDroit;
 
-    public function getDroitsId(): ?int
+    public function getIdDroit(): ?int
     {
-        return $this->droitsId;
+        return $this->idDroit;
     }
 
     public function getNiveauDroit(): ?int

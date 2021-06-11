@@ -79,6 +79,6 @@ class __TwigTemplate_0b98ba6496c339d5f0e1064912bb57ade14ae543fcfedb7f701af7fd28c
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ artist.artistId) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "artist/_delete_form.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\artist\\_delete_form.html.twig");
+", "artist/_delete_form.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\artist\\_delete_form.html.twig");
     }
 }

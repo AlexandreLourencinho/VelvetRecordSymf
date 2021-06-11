@@ -31,7 +31,7 @@ class DiscType extends AbstractType
                     ]),
                 ]
             ])
-            ->add('discYear', TextType::class, [
+            ->add('discYear', IntegerType::class, [
                 'label' => 'Année de sortie du disque',
                 'help' => 'Indiquez l\'année de sortie du disque (4 chiffres s\'il vous plait ne mettez pas de lettre parce que ma regex elle marche plus)',
                 'attr' => [
@@ -39,8 +39,8 @@ class DiscType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                    'pattern' => '/^[\d]+$/',
-                        'message' => 'Caractère(s) non valide(s)'
+                    'pattern' => '/^[0-9]{4}$/',
+                        'message' => 'Vous devez renseigner une année, au format YYYY.'
                     ]),
                 ]
             ])
@@ -66,15 +66,15 @@ class DiscType extends AbstractType
                 ]
             ])
             ->add('discLabel',TextType::class, [
-        'label' => 'Titre du disque',
-        'help' => 'Indiquez le titre complet du disque',
+        'label' => 'Libellé de l\'album',
+        'help' => 'Indiquez le libellé de l\'album.',
         'attr' => [
-            'placeholder' => 'titre du disque',
+            'placeholder' => 'Exemple : Reprise Record',
         ],
         'constraints' => [
             new Regex([
                 'pattern' => '/[^<\/`\'"\>#]/',
-                'message' => 'Caractère(s) non valide(s)'
+                'message' => 'Caractère(s) non valide(s).'
             ]),
         ]
     ])

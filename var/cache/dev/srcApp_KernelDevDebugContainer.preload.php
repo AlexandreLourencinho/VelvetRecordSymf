@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerQBdJADW/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerSbER1CV/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -41,6 +41,7 @@ $classes[] = 'App\Form\ArtistType';
 $classes[] = 'App\Form\DiscType';
 $classes[] = 'App\Form\DroitsType';
 $classes[] = 'App\Form\UtilisateursType';
+$classes[] = 'App\Repository\DiscRepository';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';

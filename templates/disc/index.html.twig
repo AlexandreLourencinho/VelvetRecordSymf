@@ -3,47 +3,44 @@
 {% block title %}Disc index{% endblock %}
 
 {% block body %}
-    <div class="d-flex justify-content-between align-items-center">
-        <h1 class="text-center"><u><b>Disc index</b></u></h1>
-        <a class="btn btn-secondary" href="{{ path('disc_new') }}">Ajouter un disque</a>
+    <div class="d-flex justify-content-around align-items-center">
+    <h1 class="col-6">Disques ({{ nombre.nbre }})</h1>
+    <a class="btn btn-secondary" href="{{ path('disc_new') }}">Ajouter un disque</a>
     </div>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered table-striped">
-            <thead>
-            <tr>
-                <th class="text-light">Titre</th>
-                <th class="text-light">Année</th>
-                <th class="text-light">Image</th>
-                <th class="text-light">Label</th>
-                <th class="text-light">Genre</th>
-                <th class="text-light">Prix</th>
-                <th class="text-light">Artiste</th>
-                <th class="text-light">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for disc in discs %}
-                <tr>
-                    <td class="text-light">{{ disc.discTitle }}</td>
-                    <td class="text-light">{{ disc.discYear }}</td>
-                    <td><img src="{{ asset('image/')~disc.discPicture }}" alt=""></td>
-                    <td class="text-light">{{ disc.discLabel }}</td>
-                    <td class="text-light">{{ disc.discGenre }}</td>
-                    <td class="text-light">{{ disc.discPrice }}</td>
-                    <td class="text-light">{{ disc.artist }}</td>
-                    <td>
-                        <a class="btn btn-outline-info me-1 mb-1 mb-xl-0" href="{{ path('disc_show', {'discId': disc.discId}) }}">Détails</a>
-                        <a class="btn btn-outline-warning ms-1 mt-1 mt-xl-0" href="{{ path('disc_edit', {'discId': disc.discId}) }}">Modifier</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="8">no records found</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for disc in discs %}
+            <div class="col">
+                <div class="card me-3">
+                    <div class="card-header">
+                        <h5 class="card-title text-center"><span
+                                    class="text-light"><u><b>Titre de l'album : </b></u></span> {{ disc.discTitle }}</h5>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                    <img class="card-img-top" src="{{ asset('image/')~disc.discPicture }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text  text-center"><span class="text-light">Année de sortie : </span> {{ disc.discYear }}</p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="text-light">Libellé : </span>  {{ disc.discLabel }}</li>
+                        <li class="list-group-item"><span class="text-light">Genre : </span> {{ disc.discGenre }}</li>
+                        <li class="list-group-item"><span class="text-light">Prix : </span> {{ disc.discPrice }}</li>
+                        <li class="list-group-item"><span
+                                    class="text-light">Groupe/artiste(s) : </span> {{ disc.artist }}</li>
+                    </ul>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <a class="btn btn-outline-info me-1 mb-1 mb-xl-0"
+                           href="{{ path('disc_show', {'discId': disc.discId}) }}">Détails</a>
+                        <a class="btn btn-outline-warning ms-1 mt-1 mt-xl-0"
+                           href="{{ path('disc_edit', {'discId': disc.discId}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-
+    </div>
+{#    {{ dump(nombre) }}#}
 
 {% endblock %}

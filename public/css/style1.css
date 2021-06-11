@@ -1,4 +1,4 @@
-img{
+img.card-img-top{
     width: 50%!important;
 }
 
@@ -17,4 +17,11 @@ nav.navbar-dark{
 
 footer.bleh{
     background-color: rgba(0,0,0,0.6) !important;
+}
+
+li.list-group-item{
+    background-color: rgba(0,0,0,0);
+}
+div.card{
+    height: 20% !important;
 }

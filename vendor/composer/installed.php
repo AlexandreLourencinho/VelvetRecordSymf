@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6065ce12883468accda500d0df3ce19b487b61bd',
+        'reference' => 'ce72902679c4726513c37d020c520e9bf5bdf020',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6065ce12883468accda500d0df3ce19b487b61bd',
+            'reference' => 'ce72902679c4726513c37d020c520e9bf5bdf020',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -137,12 +137,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/migrations' => array(
-            'pretty_version' => '3.1.2',
-            'version' => '3.1.2.0',
+            'pretty_version' => '3.1.3',
+            'version' => '3.1.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/migrations',
             'aliases' => array(),
-            'reference' => '1c2780df6b58998f411e64973cfa464ba0a06e00',
+            'reference' => '8d0c58655cf9d76462d00ec5dd099737e513e86d',
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(

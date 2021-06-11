@@ -212,6 +212,6 @@ class __TwigTemplate_0493777fcd8dff7ee6161ccf7f7286de7a212b5a189dfee30c685d1cc57
 
     <a href=\"{{ path('droits_new') }}\">Create new</a>
 {% endblock %}
-", "droits/index.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\droits\\index.html.twig");
+", "droits/index.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\droits\\index.html.twig");
     }
 }

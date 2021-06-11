@@ -52,9 +52,9 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-";
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">
+        <link rel=\"stylesheet\" href=\"";
         // line 7
-        echo "        <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
@@ -76,7 +76,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
     <header class=\"sticky-top\">
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
             <div class=\"container-fluid\">
-                <a class=\"navbar-brand\" href=\"#\">Velvet Record</a>
+                <a class=\"navbar-brand text-danger\" href=\"#\">Velvet Record</a>
                 <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     <span class=\"navbar-toggler-icon\"></span>
                 </button>
@@ -261,7 +261,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
 
     public function getDebugInfo()
     {
-        return array (  235 => 46,  225 => 17,  223 => 16,  213 => 15,  203 => 13,  201 => 12,  191 => 11,  172 => 5,  115 => 47,  113 => 46,  100 => 36,  94 => 33,  88 => 30,  74 => 18,  72 => 15,  69 => 14,  66 => 11,  62 => 8,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  235 => 46,  225 => 17,  223 => 16,  213 => 15,  203 => 13,  201 => 12,  191 => 11,  172 => 5,  115 => 47,  113 => 46,  100 => 36,  94 => 33,  88 => 30,  74 => 18,  72 => 15,  69 => 14,  66 => 11,  62 => 8,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -271,7 +271,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
-{#        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">#}
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/bootstrap.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/style1.css') }}\">
         {# Run `composer require symfony/webpack-encore-bundle`
@@ -288,7 +288,7 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
     <header class=\"sticky-top\">
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
             <div class=\"container-fluid\">
-                <a class=\"navbar-brand\" href=\"#\">Velvet Record</a>
+                <a class=\"navbar-brand text-danger\" href=\"#\">Velvet Record</a>
                 <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     <span class=\"navbar-toggler-icon\"></span>
                 </button>
@@ -359,6 +359,6 @@ class __TwigTemplate_046e62fdcd6f0caf6f1d0e50d86295148d0e5c4ead60ee53c56fba3b975
     </footer>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\base.html.twig");
     }
 }
