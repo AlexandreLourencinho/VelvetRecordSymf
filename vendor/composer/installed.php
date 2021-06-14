@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ce72902679c4726513c37d020c520e9bf5bdf020',
+        'reference' => 'a0d0b67d629876df513536170e7db9ab7b26c6ac',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ce72902679c4726513c37d020c520e9bf5bdf020',
+            'reference' => 'a0d0b67d629876df513536170e7db9ab7b26c6ac',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -537,12 +537,12 @@
             'dev_requirement' => true,
         ),
         'sebastian/global-state' => array(
-            'pretty_version' => '5.0.2',
-            'version' => '5.0.2.0',
+            'pretty_version' => '5.0.3',
+            'version' => '5.0.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sebastian/global-state',
             'aliases' => array(),
-            'reference' => 'a90ccbddffa067b51f574dea6eb25d5680839455',
+            'reference' => '23bd5951f7ff26f12d4e3242864df3e08dec4e49',
             'dev_requirement' => true,
         ),
         'sebastian/lines-of-code' => array(

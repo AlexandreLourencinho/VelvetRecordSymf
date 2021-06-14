@@ -128,6 +128,6 @@ class __TwigTemplate_ee6ba1cf89e18b50da4a29cd940acadd79f44f05a59a09307590449a701
     <h1 class=\"text-center\"><u><b>Ajouter un nouveau disque :</b></u></h1>
     {{ include('disc/_form.html.twig') }}
     <a class=\"btn btn-dark\" href=\"{{ path('disc_index') }}\">Retour à la liste des disques</a>
-{% endblock %}", "disc/new.html.twig", "C:\\Users\\Alexandre\\Desktop\\dossier_de_depots\\VelvetRecordSymf\\templates\\disc\\new.html.twig");
+{% endblock %}", "disc/new.html.twig", "C:\\Users\\80010-02-06\\Desktop\\dossiers_de_depots\\VelvetRecordSymf\\templates\\disc\\new.html.twig");
     }
 }
