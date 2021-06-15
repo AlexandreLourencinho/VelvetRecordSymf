@@ -20,6 +20,7 @@
       <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
       <parameter key="TwigExtraBundle">Twig\Extra\TwigExtraBundle\TwigExtraBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -65,6 +66,10 @@
       <parameter key="TwigExtraBundle" type="collection">
         <parameter key="path">C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\twig\extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineFixturesBundle" type="collection">
+        <parameter key="path">C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\doctrine\doctrine-fixtures-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -369,6 +374,12 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\UtilisateursController"/>
       </call>
+    </service>
+    <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
+    <service id="App\DataFixtures\DiscFixtures" class="App\DataFixtures\DiscFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\Form\ArtistType" class="App\Form\ArtistType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -1729,6 +1740,8 @@
           <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/SecurityBundle/translations</argument>
           <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\twig\extra-bundle/translations</argument>
           <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/TwigExtraBundle/translations</argument>
+          <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+          <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/DoctrineFixturesBundle/translations</argument>
           <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
@@ -1759,6 +1772,8 @@
             <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/SecurityBundle/translations</argument>
             <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\twig\extra-bundle/translations</argument>
             <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/TwigExtraBundle/translations</argument>
+            <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+            <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/DoctrineFixturesBundle/translations</argument>
             <argument>C:\Users\80010-02-06\Desktop\dossiers_de_depots\VelvetRecordSymf\src/Resources/translations</argument>
           </argument>
         </argument>
@@ -4862,6 +4877,35 @@
       </call>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
+    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
+      <tag name="console.command" command="doctrine:fixtures:load"/>
+      <argument type="service" id="doctrine.fixtures.loader"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="collection">
+        <argument key="default" type="service" id="doctrine.fixtures.purger.orm_purger_factory"/>
+      </argument>
+      <call method="setName">
+        <argument>doctrine:fixtures:load</argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.loader" class="Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader" public="false">
+      <argument type="service" id="service_container"/>
+      <call method="addFixtures">
+        <argument type="collection">
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\DiscFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+        </argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory" public="false">
+      <tag name="doctrine.fixtures.purger_factory" alias="default"/>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4877,6 +4921,10 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UtilisateursController" class="App\Controller\UtilisateursController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UtilisateursController" class="App\Controller\UtilisateursController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UtilisateursController" class="App\Controller\UtilisateursController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\DiscFixtures" class="App\DataFixtures\DiscFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\DiscFixtures" class="App\DataFixtures\DiscFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArtistType" class="App\Form\ArtistType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ArtistType" class="App\Form\ArtistType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DiscType" class="App\Form\DiscType" autowire="true" abstract="true"/>
@@ -5710,7 +5758,7 @@
     <service id=".errored..service_locator.wID56t1.App\Entity\Droits" class="App\Entity\Droits"/>
     <service id=".errored..service_locator.og06o3h.App\Entity\Utilisateurs" class="App\Entity\Utilisateurs"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.KQm4.fv"/>
+      <argument type="service" id=".service_locator.1H70xFP"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5777,6 +5825,7 @@
         <argument key="doctrine:migrations:up-to-date">doctrine_migrations.up_to_date_command</argument>
         <argument key="doctrine:migrations:version">doctrine_migrations.version_command</argument>
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
+        <argument key="doctrine:fixtures:load">doctrine.fixtures_load_command</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -5802,7 +5851,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.KQm4.fv" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.1H70xFP" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand" type="service_closure" id="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand"/>
@@ -5843,6 +5892,7 @@
         <argument key="doctrine.database_drop_command" type="service_closure" id="doctrine.database_drop_command"/>
         <argument key="doctrine.database_import_command" type="service_closure" id="doctrine.database_import_command"/>
         <argument key="doctrine.ensure_production_settings_command" type="service_closure" id="doctrine.ensure_production_settings_command"/>
+        <argument key="doctrine.fixtures_load_command" type="service_closure" id="doctrine.fixtures_load_command"/>
         <argument key="doctrine.mapping_convert_command" type="service_closure" id="doctrine.mapping_convert_command"/>
         <argument key="doctrine.mapping_import_command" type="service_closure" id="doctrine.mapping_import_command"/>
         <argument key="doctrine.mapping_info_command" type="service_closure" id="doctrine.mapping_info_command"/>
