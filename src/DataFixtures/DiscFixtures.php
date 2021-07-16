@@ -11,12 +11,12 @@ class DiscFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         for ($i=1;$i<=10;$i++){
-             $product = new Product();
-             $product
+             $disc = new Disc();
+             $disc
                  ->setdiscTitle('disque '.$i)
                  ->setdiscYear('000'.$i)
                  ->setdiscLabel('test '.$i);
-             $manager>persist($product);
+             $manager->persist($disc);
         }
         $manager->flush();
     }
